@@ -46,6 +46,7 @@ public class EmailSender
 			transport.connect(host, from, pass);
 			transport.sendMessage(message, message.getAllRecipients());
 			transport.close();
+			System.out.println("Mail sent successfully.");
 			return true;
 		} 
 		catch (AddressException ae) 
