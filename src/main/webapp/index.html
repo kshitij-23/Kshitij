@@ -24,11 +24,10 @@
 									<a href="#menu" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
+											<li><a href="index.html" class="more scrolly">Home</a></li>
+											<li><a href="#one" class="more scrolly">Introduction</a></li>
+											<li><a href="#two" class="more scrolly">Skills</a></li>
+											<li><a href="#three" class="more scrolly">Hire</a></li>
 										</ul>
 									</div>
 								</li>
@@ -49,7 +48,8 @@
 						<div class="inner">
 							<header class="major">
 								<h2>KSHITIJ SOLANKI</h2>
-								<p>I’m a JAVA/J2EE/Database Developer with only one goal in mind to grasp knowledge as much as you can. Learning new technologies within java and database is my passion.</p>
+								<p><img src="images/PeqiI.jpg" class="img-circle" alt="Cinque Terre" height="200px" width="200px;"></p>
+								<p>I’m a JAVA/J2EE/Database Developer with only one goal in mind to grasp knowledge as much as I can. Learning new technologies within java and database is my passion.</p>
 							</header>
 							<ul class="icons major">
 								<li><span class="icon fa-diamond major style1"><span class="label">Lorem</span></span></li>
@@ -68,7 +68,7 @@
 								<h4>J2EE MVC Frameworks</h4>
 								<p>JSF2, Struts2, Struts1.3, Spring-MVC, Vaadin</p>
 								<h4>Spring Modules</h4>
-								<p>Core, Web, Batch, Data, Social, JDBC, Hibernate</p>
+								<p>Spring-Core, Spring-Web, Spring-Batch, Spring-Data, Spring-Social, Spring-JDBC, Spring-Hibernate</p>
 								<h4>Web Services</h4>
 								<p>SOAP Services, Restful Web Services (Jersey Framework)</p>
 								<h4>ORM</h4>
@@ -87,6 +87,7 @@
 								<p>JSP, XHTML (Facelets), JSTL</p>
 							</div>
 						</section>
+						
 						<!-- <section class="spotlight">
 							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
 								<h2>Database</h2>
@@ -100,36 +101,37 @@
 					<section id="three" class="wrapper style3 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<h2>Hire ME</h2>
+								<p>I AM AVAILABLE FOR FREELANCING WORK.</p>
 							</header>
-							<ul class="features">
+							<section>
+								<form method="post" action="SendEmailServlet">
+									<div class="row uniform">
+										<div class="6u 12u$(xsmall)">
+											<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+										</div>
+										<div class="6u$ 12u$(xsmall)">
+											<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+										</div>
+										<div class="12u$">
+											<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+										</div>
+										<div class="12u$">
+											<ul class="actions">
+												<li><input type="submit" value="Send Message" class="special" /></li>
+												<li><input type="reset" value="Reset" /></li>
+											</ul>
+										</div>
+									</div>
+								</form>
+							</section>
+							
+							<!-- <ul class="features">
 								<li class="icon fa-paper-plane-o">
 									<h3>Arcu accumsan</h3>
 									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
 								</li>
-								<li class="icon fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-headphones">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-heart-o">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-flag-o">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-							</ul>
+							</ul>  -->
 						</div>
 					</section>
 
@@ -149,13 +151,15 @@
 
 				<!-- Footer -->
 					<footer id="footer">
-						<ul class="icons">
+						<!-- <ul class="icons">
 							<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 							<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
 							<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
 							<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-						</ul>
+						</ul> -->
+						
+						<a href="#one" class="more scrolly">UP</a><br/>
 						<ul class="copyright">
 							<li>&copy; KSHTITIJ23.com</li>
 						</ul>
