@@ -12,8 +12,8 @@ import javax.mail.internet.MimeMessage;
 
 public class EmailSender 
 {
-	private static String from = "solanki078@gmail.com";
-	private static String pass = "Lilykinjal2312*";
+	private static String from = "xitij9092@gmail.com";
+	private static String pass = "Temp23Temp*";
 	private static String subject = "Someone is looking to hire you";
 	private static String[] to = {"solanki078@gmail.com"};
 	
@@ -23,8 +23,8 @@ public class EmailSender
 		String host = "smtp.gmail.com";
 		props.put("mail.smtp.starttls.enable", "true");
 		props.put("mail.smtp.host", host);
-		props.put("mail.smtp.user", "xitij9092@gmail.com");
-		props.put("mail.smtp.password", "Temp23Temp*");
+		props.put("mail.smtp.user", from);
+		props.put("mail.smtp.password", pass);
 		props.put("mail.smtp.port", "587");
 		props.put("mail.smtp.auth", "true");
 		
