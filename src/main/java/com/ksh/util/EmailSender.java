@@ -1,5 +1,6 @@
 package com.ksh.util;
 
+import java.io.IOException;
 import java.util.Properties;
 
 import javax.mail.Message;
@@ -17,7 +18,7 @@ public class EmailSender
 	private static String subject = "Someone is looking to hire you";
 	private static String[] to = {"solanki078@gmail.com"};
 	
-	public static boolean sendFromGMail(String body) 
+	public static boolean sendFromGMail(String body) throws IOException 
 	{
 		Properties props = System.getProperties();
 		String host = "smtp.gmail.com";
@@ -42,6 +43,7 @@ public class EmailSender
 			}
 			message.setSubject(subject);
 			message.setContent(body, "text/html");
+			System.out.println("EmailSender : "+message.getContent().toString());
 			Transport transport = session.getTransport("smtp");
 			transport.connect(host, from, pass);
 			transport.sendMessage(message, message.getAllRecipients());
