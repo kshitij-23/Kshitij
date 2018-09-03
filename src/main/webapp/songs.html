@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>KSHITIJ</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		
+	</head>
+	<body class="landing">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+					<header id="header" class="alt">
+						<h1><a href="index.html">KSHITIJ</a></h1>
+						<nav id="nav">
+							<ul>
+								<li class="special">
+									<a href="#menu" class="menuToggle"><span>Menu</span></a>
+									<div id="menu">
+										<ul>
+											<li><a href="index.html" class="more scrolly">Home</a></li>
+											<li><a href="#one" class="more scrolly">Introduction</a></li>
+											<li><a href="#two" class="more scrolly">Skills</a></li>
+											<li><a href="#three" class="more scrolly">Contact</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Banner -->
+					<section id="banner">
+						<div class="inner">
+							<h2>KSHITIJ</h2>
+						</div>
+						<a href="#one" class="more scrolly">Learn More</a>
+					</section>
+
+				<!-- Three -->
+					<section id="three" class="wrapper style3 special">
+						<div class="inner" id="songs-content-div">
+							
+						</div>
+					</section>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<a href="#one" class="more scrolly">UP</a><br/>
+						<ul class="copyright">
+							<li>&copy; KSHTITIJ23.com</li>
+						</ul>
+					</footer>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+			<script>
+			
+				var url = "songsServlet?folderName=";
+				$(document).ready(function() {
+				    console.log( "ready!" );
+				 	getData("songs");   
+				});
+				
+				function downloadFile(fileName)
+				{
+					alert(fileName);
+				}
+				
+				function getFiles(folderName)
+				{
+					var folderName = $.trim(folderName)
+					$.get(url+folderName, function(responseText) 
+					{   
+						var s = "<ul style=\"list-style: none;\">";
+						for(var key in responseText) 
+						{
+		                    s = s+'<li><a href="#" onclick="return downloadFile(\''+responseText[key]+'\');">'+responseText[key]+'</a></li>';
+		               	}
+						s = s+"</ul>"
+						alert(s);
+						$("#songs-content-div").append(s);
+						
+				    });
+				}
+				
+				function getData(folderName)
+				{
+					$.get(url+folderName, function(responseText) 
+					{   
+						var s = "<ul style=\"list-style: none;\">";
+						for(var key in responseText) 
+						{
+		                    s = s+'<li><a href="#" onclick="return getFiles(\''+responseText[key]+'\');">'+responseText[key]+'</a></li>';
+		               	}
+						s = s+"</ul>"
+						alert(s);
+						$("#songs-content-div").append(s);
+						
+				    });
+				}	
+        	</script>
+	</body>
+</html>
