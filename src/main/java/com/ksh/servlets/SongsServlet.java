@@ -26,10 +26,11 @@ public class SongsServlet extends HttpServlet {
 		try
 		{
 			String folderName = request.getParameter("folderName").contains("7") ? request.getParameter("folderName").replaceAll("7", "/") : request.getParameter("folderName");
-			String name = request.getServletContext().getRealPath("/"+folderName);
+			String name = request.getServletContext().getRealPath("//"+folderName);
 //			System.out.println("Name : "+name);
 			File songsFolder = new File(name);
 			File[] files = songsFolder.listFiles();
+			System.out.println("File Size : "+files.length);
 			Stream<File> stream = Arrays.stream(files);
 			List<String> strings = new ArrayList<>();
 			stream.forEach
@@ -39,7 +40,7 @@ public class SongsServlet extends HttpServlet {
 					if(e.isDirectory())
 						strings.add(folderName+"7"+e.getName());
 					else
-						strings.add(e.getAbsolutePath());
+						strings.add(folderName+"/"+e.getName());
 				}
 			);
 			
